@@ -209,7 +209,7 @@ def list_available_roms(force_recheck: bool = False) -> list[ROM]:
         if file.is_file():
             try:
                 rom = load_rom_data(file)
-                if rom.is_gen3:
+                if rom.is_gen2:
                     result.append(rom)
             except InvalidROMError:
                 pass
